@@ -167,10 +167,12 @@
         <h1>Oicaimang</h1>
     </header>
     <nav>
-        <a href="#assets">Assets</a>
-        <a href="#about">About</a>
-        <a href="https://assetstore.unity.com/users/18967080579025" target="_blank">Asset Store</a>
-        <button class="mode-toggle" onclick="toggleMode()">Light/Dark</button>
+        <div class="button-group">
+            <a href="#assets">Assets</a>
+            <a href="#about">About</a>
+            <a href="https://assetstore.unity.com/users/18967080579025" target="_blank">Asset Store</a>
+            <button class="mode-toggle" onclick="toggleMode()">Light/Dark</button>
+        </div>
     </nav>
     <div class="banner">Explore My Unity Assets</div>
     <section class="content" id="assets">
@@ -218,7 +220,8 @@
     </footer>
     <script>
         function toggleMode() {
-            document.body.classList.toggle("light-mode");
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
         }
     </script>
 </body>
