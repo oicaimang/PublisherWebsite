@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Unity Publisher Website</title>
+    <title>Oicaimang Asset Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             background: #f5f6fa;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
@@ -20,6 +22,12 @@
             text-align: center;
         }
 
+        header img {
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
         header h1 {
             margin: 0;
             font-size: 2rem;
@@ -27,15 +35,26 @@
 
         nav {
             text-align: center;
-            padding: 10px;
-            background: #444;
+            padding: 15px;
+            background: #222;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: bold;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a:hover {
+            background: linear-gradient(90deg, #0056b3, #00aaff);
+            transform: translateY(-3px);
         }
 
         .banner {
@@ -78,9 +97,7 @@
             width: 100%;
             height: 150px;
             object-fit: contain;
-            /* Giữ tỷ lệ ảnh */
             background-color: #f0f0f0;
-            /* Tạo nền xám nếu ảnh không che hết khung */
             border-bottom: 1px solid #ddd;
         }
 
@@ -112,13 +129,16 @@
             color: #aaa;
             margin-top: 20px;
         }
+
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/images.png" alt="Logo"
-            style="height: 60px; border-radius: 50%; margin-bottom: 10px;">
+        <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/avt.png" alt="Logo">
         <h1>Oicaimang Asset Store</h1>
     </header>
 
@@ -127,47 +147,53 @@
         <a href="#about">About</a>
         <a href="https://assetstore.unity.com/users/18967080579025" target="_blank">Asset Store</a>
     </nav>
+
     <div class="banner">Explore My Unity Assets</div>
+
     <section class="content" id="assets">
         <h2>Featured Assets</h2>
         <div class="asset-grid">
             <div class="asset-card">
+                <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/heartWave.png"
+                    alt="Shader 2D Package">
+                <h3>Shader2DPackage</h3>
+                <a href="#">View on Asset Store</a>
+            </div>
 
-                <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/images.png"
-                    alt="Coming Soon">
-                <h3>Coming Soon</h3>
+            <div class="asset-card">
+                <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/treeWind.png"
+                    alt="Tree Wind Package">
+                <h3>TreeWindPackage</h3>
                 <a href="#">View on Asset Store</a>
             </div>
         </div>
     </section>
+
     <section class="content" id="about">
         <h2>About Me</h2>
         <p>I am a Unity publisher creating high-quality assets for developers. I have over 5 years of experience
-            developing games with Unity.
-            Throughout my journey, I have created a variety of useful assets to improve workflow and game quality.
-            My goal is to share these resources with other developers and support the Unity community by providing
-            tools and content that make game development faster and more enjoyable.
-            Check out my work on the Unity Asset Store and feel free to contact me for collaborations.</p>
+            developing games with Unity. Throughout my journey, I have created a variety of useful assets to improve
+            workflow
+            and game quality. My goal is to share these resources with other developers and support the Unity community
+            by
+            providing tools and content that make game development faster and more enjoyable.
+        </p>
     </section>
 
-    <!-- Contact Section -->
     <section class="content" id="contact">
         <h2>Contact</h2>
         <p>If you have any questions or collaboration ideas, feel free to reach me at:</p>
         <ul>
-            <li>Email: <a href="mailto:oicaimang@example.com">nguyenducquyet175@gmail.com</a></li>
+            <li>Email: <a href="mailto:nguyenducquyet175@gmail.com">nguyenducquyet175@gmail.com</a></li>
             <li>Phone: +84 37 257 8249</li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/quy%E1%BA%BFt-nguy%E1%BB%85n-29588a1b1/"
-                    target="_blank">MyLinkedIn</a>
-            </li>
+                    target="_blank">MyLinkedIn</a></li>
         </ul>
     </section>
 
-
     <footer>
-        <p>© 2025 My Unity Publisher Website. All Rights Reserved.</p>
+        <p>© 2025 Oicaimang Asset Store. All Rights Reserved.</p>
     </footer>
-
 </body>
 
 </html>
