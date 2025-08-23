@@ -7,12 +7,27 @@
     <title>Oicaimang Asset Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --card-bg: #1e1e1e;
+            --nav-bg: #222;
+        }
+
+        body.light-mode {
+            --bg-color: #f5f6fa;
+            --text-color: #333;
+            --card-bg: #fff;
+            --nav-bg: #222;
+        }
+
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
-            background: #f5f6fa;
-            color: #333;
+            background: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         header {
@@ -28,15 +43,10 @@
             margin-bottom: 10px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
         nav {
             text-align: center;
             padding: 15px;
-            background: #222;
+            background: var(--nav-bg);
         }
 
         nav a {
@@ -55,6 +65,21 @@
         nav a:hover {
             background: linear-gradient(90deg, #0056b3, #00aaff);
             transform: translateY(-3px);
+        }
+
+        .mode-toggle {
+            background: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .mode-toggle:hover {
+            background: #0056b3;
         }
 
         .banner {
@@ -82,11 +107,11 @@
         }
 
         .asset-card {
-            background: #fff;
+            background: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, background 0.3s ease;
         }
 
         .asset-card:hover {
@@ -139,17 +164,15 @@
 <body>
     <header>
         <img src="https://raw.githubusercontent.com/oicaimang/PublisherWebsite/refs/heads/main/avt.png" alt="Logo">
-        <h1>Oicaimang Asset Store</h1>
+        <h1>Oicaimang</h1>
     </header>
-
     <nav>
         <a href="#assets">Assets</a>
         <a href="#about">About</a>
         <a href="https://assetstore.unity.com/users/18967080579025" target="_blank">Asset Store</a>
+        <button class="mode-toggle" onclick="toggleMode()">Light/Dark</button>
     </nav>
-
     <div class="banner">Explore My Unity Assets</div>
-
     <section class="content" id="assets">
         <h2>Featured Assets</h2>
         <div class="asset-grid">
@@ -190,10 +213,14 @@
                     target="_blank">MyLinkedIn</a></li>
         </ul>
     </section>
-
     <footer>
         <p>© 2025 Oicaimang Asset Store. All Rights Reserved.</p>
     </footer>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
 </body>
 
 </html>
